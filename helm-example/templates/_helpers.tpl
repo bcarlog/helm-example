@@ -3,7 +3,7 @@
 Expand the name of the chart.
 */}}
 {{- define "helm-guestbook.name" -}}
-{{- default .Chart.Name .Values.nameOverride .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
+{{- default .Chart.Name .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
 {{/*
